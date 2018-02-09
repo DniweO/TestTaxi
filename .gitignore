@@ -1,5 +1,7 @@
-﻿.idea/
+.idea/
 /node_modules/
 /build/
 /src/img/symbol/
 /npm-debug.log
+src/vendor/jquery/src/ajax.js
+src/vendor/

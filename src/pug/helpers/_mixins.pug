@@ -1,0 +1,23 @@
+//- Миксины проекта
+
+//- Базовая разметка страницы
+mixin base-page(page)
+  doctype html
+  html(lang='ru')
+    head
+      include ../meta/_head
+    body
+      //-include ../svg/svg
+      //-include ../../img/sprite.svg
+      include ../partials/_header
+      if block
+        block
+      include ../partials/_footer
+      //- скрипты
+      include ../meta/_scripts
+
+//- svg-иконка из Dom
+mixin svg-icon(name)
+  svg(class ='svg-icon svg-icon-' + name)
+    title=name
+    use(xlink:href='#' + name)

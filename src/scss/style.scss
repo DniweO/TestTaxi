@@ -1,0 +1,12 @@
+@import "helpers/vars";           // Переменные проекта
+@import "helpers/mixins";         // Миксины проекта
+@import "base/fonts";             // Шрифты
+@import "base/grid";              // Компоненты сетки
+@import "base/reset";             // Сброс и определение глобальных стилей
+@import "base/typography";        // Типографика проекта
+@import "svg-sprite";             // Сгенерированный SGV-sprite
+@import "icons";                  // Всё, что касается спрайта/иконок, SGV
+// Компоненты сайта
+@import "partials/header";        // Шапка
+@import "partials/footer";        // Подвал
+@import "common";                 // общие стили для страниц

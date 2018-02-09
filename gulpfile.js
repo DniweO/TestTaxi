@@ -43,28 +43,15 @@ const paths = {
 
 const sources = {
   jsSrc:       [
-    paths.js + 'header.js',
-    paths.js + 'nav-menu.js',
-    paths.js + 'swiper.js',
-    paths.js + 'magnific-popup.js',
-    paths.js + 'gallery.js',
-    paths.js + 'catalog.js',
-    paths.js + 'svg-cache.js',
     paths.js + 'browser-updater.js'
   ],
   libsJsSrc:   [
-    paths.libs + 'jquery/dist/jquery.min.js',
-    paths.libs + 'swiper/dist/js/swiper.min.js',
-    paths.libs + 'imagelightbox/dist/imagelightbox.min.js',
-    paths.libs + 'magnific-popup/dist/jquery.magnific-popup.min.js'
+    paths.libs + 'jquery/dist/jquery.min.js'
   ],
   imgSrc:      paths.images + '**/*.{png,jpg,jpeg,gif,svg,ico}',
   fontsSrc:    paths.fonts + '**/*.{woff,woff2,ttf, eot}',
   sassSrc:     paths.sass + 'style.scss',
   libsSassSrc: [
-    paths.libs + 'swiper/dist/css/swiper.min.css',
-    paths.libs + 'imagelightbox/dist/imagelightbox.min.css',
-    paths.libs + 'magnific-popup/dist/magnific-popup.css',
     paths.libs + 'normalize-css/normalize.css'
   ],
   pugSrc:      [paths.pug + '*.pug', '!' + paths.pug + '_*.pug']

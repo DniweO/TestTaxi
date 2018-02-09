@@ -11,5 +11,9 @@
     "**/.*",
     "node_modules",
     "bower_components"
-  ]
+  ],
+  "devDependencies": {
+    "normalize-css": "^8.0.0",
+    "jquery": "^3.3.1"
+  }
 }
