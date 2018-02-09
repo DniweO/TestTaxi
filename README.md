@@ -9,6 +9,8 @@
 ## Install dependencies 
 
   npm install
+  
+  bower install
 
 ## Run gulp
 
