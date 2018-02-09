@@ -1,0 +1,5 @@
+﻿.idea/
+/node_modules/
+/build/
+/src/img/symbol/
+/npm-debug.log
