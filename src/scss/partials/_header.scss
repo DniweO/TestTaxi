@@ -39,11 +39,15 @@
 
     align-items: center;
     justify-content: center;
-
     &:hover {
       cursor: pointer;
 
       color: $light-gray;
+    }
+
+    .svg-icon-dots {
+      width: 18px;
+      height: 4px;
     }
   }
 }
