@@ -9,3 +9,8 @@
     font: $font-weight $font-style #{$font-size} / #{$line-height} $font-family;
   }
 }
+
+//@include transition;
+@mixin transition($property: all, $time: 0.3s) {
+  transition: $property $time ease-in;
+}

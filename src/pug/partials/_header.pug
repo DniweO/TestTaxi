@@ -1,3 +1,13 @@
 +b.HEADER.header
   .container
-    .row.row_flex Header
+    .row.row_flex
+      a(href='/').logo
+        +svg-icon('logo')
+      +b.NAV.nav
+        each item, i in navMenu
+          +e.link(
+            href=(!i ? '#' : item.href),
+            class=(!i ? 'is-active' : '')
+          )=item.name
+        +e.BUTTON.anchor
+          +svg-icon('dots')

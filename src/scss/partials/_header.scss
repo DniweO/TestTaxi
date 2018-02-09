@@ -1,1 +1,63 @@
 // /src/scss/_header.scss
+
+.header {
+  //
+}
+
+.nav {
+  display: flex;
+
+  align-items: center;
+  &__link {
+    @include font(14px, 400, 1);
+    @include transition(color);
+
+    padding: 17px;
+
+    text-decoration: none;
+
+    color: $black;
+    box-shadow: inset 0 0 0 1px silver;
+
+    &:hover,
+    &.is-active {
+      color: $light-gray;
+    }
+  }
+
+  &__anchor {
+    @include transition(color);
+
+    display: flex;
+
+    padding: 5px;
+
+    color: $black;
+    border: none;
+    background: none;
+    box-shadow: inset 0 0 0 1px silver;
+
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+
+      color: $light-gray;
+    }
+  }
+}
+
+.logo {
+  display: flex;
+
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+
+  color: $white;
+  background-color: #3a588c;
+
+  align-items: center;
+  justify-content: center;
+}
