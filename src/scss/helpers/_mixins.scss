@@ -14,3 +14,56 @@
 @mixin transition($property: all, $time: 0.3s) {
   transition: $property $time ease-in;
 }
+
+// миксин генерирует стрелку в псевдоэлементе after см. _mixins.scss
+// @include arrow($size, $width, $color, $color-hover)
+@mixin arrow($size: 10px, $width: 3px, $color: currentColor, $color-hover: $color) {
+  & {
+    position: relative;
+  }
+  &:after {
+    @include transition;
+
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    display: block;
+
+    width: $size;
+    height: $size;
+
+    content: "";
+    transform: translate(-50%, -75%) rotate(135deg);  // вниз
+    transform-origin: center;
+
+    border: $width solid $color;
+    // направо
+    border-bottom: none;
+    border-left: none;
+
+  }
+  &:hover:after {
+    border: $width solid $color-hover;
+    // направо
+    border-bottom: none;
+    border-left: none;
+  }
+}
+
+// миксин поворачивает стрелку, сгенерированную предыдущим
+// миксином arrow
+// @include rotate-arrow(right) // $direction: up, down, left, right
+@mixin rotate-arrow($direction: "right") {
+  &:after {
+    @if ($direction == "up") {
+      transform: translate(-50%, -25%) rotate(-45deg); // вверх
+    } @else if ($direction == "down") {
+      transform: translate(-50%, -75%) rotate(135deg); // вниз
+    } @else if ($direction == "left") {
+      transform: translate(-25%, -50%) rotate(225deg); // налево
+    } @else if ($direction == "right") {
+      transform: translate(-75%, -50%) rotate(45deg); // направо
+    }
+  }
+}

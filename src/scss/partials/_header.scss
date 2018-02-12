@@ -52,6 +52,10 @@
   }
 }
 
+.current-action {
+  box-shadow: inset 0 0 0 1px silver;
+}
+
 .logo {
   display: flex;
 
@@ -64,4 +68,29 @@
 
   align-items: center;
   justify-content: center;
+}
+
+.user {
+  margin-right: 30px;
+  margin-left: auto;
+
+  &__name {
+    // миксин генерирует стрелку в псевдоэлементе after см. _mixins.scss
+    @include arrow(8px);
+    @include rotate-arrow('down');
+
+    font-size: 14px;
+    line-height: 1;
+
+    padding-right: 19px;
+    &:hover {
+      @include rotate-arrow('up');
+
+      cursor: pointer;
+    }
+  }
+}
+
+.user-list {
+  display: none;
 }
