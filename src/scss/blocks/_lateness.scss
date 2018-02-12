@@ -1,0 +1,68 @@
+
+.lateness {
+  @include font(13px);
+
+  display: flex;
+
+  padding: 8px 14px 8px 10px;
+
+  border: 2px solid $yellow;
+  border-radius: 5px;
+
+  align-items: center;
+
+  &__order-number {
+    margin-right: 10px;
+
+    color: $black;
+  }
+
+  &__employee {
+    margin-right: 10px;
+
+    color: $light-gray;
+  }
+
+  &__delay {
+    @include font(14px);
+
+    margin-right: 19px;
+    margin-left: auto;
+
+    color: $red;
+  }
+
+  &__call {
+    @include transition(color);
+
+    width: 28px;
+    height: 28px;
+
+    color: $green;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+
+    &:hover {
+      color: darken($green, 10%);
+    }
+
+    &:active {
+      color: lighten($green, 5%);
+    }
+  }
+
+  &__anchor {
+    margin-left: 15px;
+    padding: 5px;
+
+    box-shadow: inset 0 0 0 1px silver;
+    .svg-icon-dots {
+      width: 4px;
+      height: 18px;
+    }
+  }
+
+  .circle {
+    margin-right: 14px;
+  }
+}

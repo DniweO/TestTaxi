@@ -41,3 +41,20 @@
     }
   }
 }
+
+.main {
+  width: calc(100% - #{$map-width});
+  padding: 30px 30px 28px 30px;
+}
+
+.block {
+  padding: 10px;
+
+  border-radius: 5px;
+  background: $white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}

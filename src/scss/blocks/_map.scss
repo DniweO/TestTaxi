@@ -1,5 +1,6 @@
 .map {
   width: $map-width;
+  min-width: $map-width;
   height: 100vh;
 
   &__placemark {
