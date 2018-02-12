@@ -43,7 +43,8 @@ const paths = {
 
 const sources = {
   jsSrc:       [
-    paths.js + 'browser-updater.js'
+    paths.js + 'browser-updater.js',
+    paths.js + 'map.js'
   ],
   libsJsSrc:   [
     paths.libs + 'jquery/dist/jquery.min.js'
@@ -163,9 +164,9 @@ gulp.task('svg', function() {
              // remove all fill and style declarations in out shapes
              .pipe(cheerio({
                              run:           function($) {
-                               $('[fill]').removeAttr('fill');
+                               //$('[fill]').removeAttr('fill');
                                $('[stroke]').removeAttr('stroke');
-                               $('[style]').removeAttr('style');
+                               //$('[style]').removeAttr('style');
                              },
                              parserOptions: {xmlMode: true}
                            }))

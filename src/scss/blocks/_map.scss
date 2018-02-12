@@ -1,0 +1,12 @@
+.map {
+  width: $map-width;
+  height: 100vh;
+
+  &__placemark {
+    width: 42px;
+    height: 58px;
+
+    color: $red;
+    fill: $white;
+  }
+}
