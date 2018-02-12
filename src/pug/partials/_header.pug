@@ -9,15 +9,21 @@
             href=(!i ? '#' : item.href),
             class=(!i ? 'is-active' : '')
           )=item.name
-        +e.BUTTON.anchor
-          +svg-icon('dots')
+        +e.anchor
+          +b.BUTTON.sub-nav
+            +svg-icon('dots')
+            +e.UL.list
+              each item in navMenu
+                +e.item
+                  +e.link(href=item.href)=item.name
       +b.current-action
-        +e.BUTTON.pause
-          +svg-icon('logo')
-          +e.SPAN.subscriber-number + 375 (44) 000-00-00
-          +e.SPAN.call-duration 0:24
-        +e.BUTTON.cancel
-          +svg-icon('logo')
+        +e.BUTTON.pause.circle.circle_yellow
+          +svg-icon('pause')
+        +e.SPAN.subscriber-number + 375 (44) 000-00-00
+        +e.SPAN.call-duration 0:24
+        +e.BUTTON.cancel.circle.circle_red
+          +svg-icon('phone')
+      +b.order-creation(href='/orders.html') Создать заказ
       +b.user.js-user
         +e.name Наталья
         +b.UL.user-list
