@@ -7,8 +7,7 @@ mixin base-page(page)
     head
       include ../meta/_head
     body
-      //-include ../svg/svg
-      //-include ../../img/sprite.svg
+      include ../../img/sprite.svg
       include ../partials/_header
       if block
         block
@@ -19,5 +18,5 @@ mixin base-page(page)
 //- svg-иконка из Dom
 mixin svg-icon(name)
   svg(class ='svg-icon svg-icon-' + name)
-    title=name
+    //-title=name
     use(xlink:href='#' + name)

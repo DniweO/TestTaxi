@@ -19,7 +19,11 @@
     flex-wrap: wrap;
   }
 
-  &_center {
+  &_align-center {
+    align-items: center;
+  }
+
+  &_content-center {
     justify-content: center;
   }
 }

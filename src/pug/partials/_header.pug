@@ -1,3 +1,26 @@
 +b.HEADER.header
   .container
-    .row.row_flex Header
+    .row.row_flex.row_align-center
+      a(href='/').logo
+        +svg-icon('logo')
+      +b.NAV.nav
+        each item, i in navMenu
+          +e.link(
+            href=(!i ? '#' : item.href),
+            class=(!i ? 'is-active' : '')
+          )=item.name
+        +e.BUTTON.anchor
+          +svg-icon('dots')
+      +b.current-action
+        +e.BUTTON.pause
+          +svg-icon('logo')
+          +e.SPAN.subscriber-number + 375 (44) 000-00-00
+          +e.SPAN.call-duration 0:24
+        +e.BUTTON.cancel
+          +svg-icon('logo')
+      +b.user.js-user
+        +e.name Наталья
+        +b.UL.user-list
+          +e.item a
+          +e.item b
+          +e.item s
