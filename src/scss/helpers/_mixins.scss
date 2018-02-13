@@ -63,7 +63,7 @@
     } @else if ($direction == "left") {
       transform: translate(-25%, -50%) rotate(225deg); // налево
     } @else if ($direction == "right") {
-      transform: translate(-75%, -50%) rotate(45deg); // направо
+      transform: translate(-75%, -50%) rotate(45deg);  // направо
     }
   }
 }

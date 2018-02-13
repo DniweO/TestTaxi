@@ -7,9 +7,11 @@
 @import "svg-sprite";             // Сгенерированный SGV-sprite
 @import "icons";                  // Всё, что касается спрайта/иконок, SGV
 // Компоненты сайта
+@import "components/buttons";     // Кнопки
 @import "partials/header";        // Шапка
 @import "partials/footer";        // Подвал
 @import "common";                 // Общие стили
 // Блоки
 @import "blocks/map";             // Карта
 @import "blocks/lateness";        // Опаздывающий таксист
+@import "blocks/orders";          // Заказы

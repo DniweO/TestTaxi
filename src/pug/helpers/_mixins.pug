@@ -20,3 +20,8 @@ mixin svg-icon(name)
   svg(class ='svg-icon svg-icon-' + name)
     //-title=name
     use(xlink:href='#' + name)
+
+//- Кнопка звонка
+mixin button-call()
+  +b.BUTTON.button-call
+    +svg-icon('handset')
