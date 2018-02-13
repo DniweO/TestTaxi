@@ -1,8 +1,13 @@
+.map-wrapper {
+  position: relative;
+  height: auto;
+}
+
 .map {
   position: relative;
 
   min-width: $map-width;
-  height: calc(100vh - 60px - 15px); // screen height - header - footer
+  height:100%;
 
   &__placemark {
     width: 20px;
