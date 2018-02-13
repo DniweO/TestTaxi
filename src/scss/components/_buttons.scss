@@ -1,0 +1,16 @@
+.button-call {
+  @include transition();
+
+  width: 28px;
+  min-width: 28px;
+  height: 28px;
+
+  color: $green;
+  border: 1px solid $green;
+  border-radius: 50%;
+
+  &:hover {
+    color: $white;
+    background-color: $green;
+  }
+}

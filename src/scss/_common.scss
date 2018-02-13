@@ -5,17 +5,18 @@
   @include transition();
 
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 35px;
+  min-width: 35px;
   height: 35px;
 
   border-radius: 50%;
 
-  align-items: center;
-  justify-content: center;
-
   &_small {
     width: 30px;
+    min-width: 30px;
     height: 30px;
   }
 
@@ -56,5 +57,42 @@
 
   &:not(:first-child) {
     margin-top: 20px;
+  }
+
+  &_extra-padding {
+    padding: 10px 11px 12px 30px;
+  }
+}
+
+.status-circle {
+  position: relative;
+
+  padding-left: 7px + 8px; //7px диаметр, 8px отступ
+  &:before {
+    position: absolute;
+    top: 2px;
+    left: 0;
+
+    display: inline-block;
+
+    width: 8px;
+    height: 8px;
+
+    content: '';
+
+    border-radius: 50%;
+    background-color: #4f4f4f;
+  }
+
+  &_free:before {
+    background-color: $green;
+  }
+
+  &_busy:before {
+    background-color: $red;
+  }
+
+  &_transit:before {
+    background-color: $yellow;
   }
 }

@@ -1,0 +1,57 @@
++b.orders
+  +e.head
+    +e.title Автомобили
+    +b.UL.status-list
+      +e.item.status-circle.status-circle_free свободен 6
+      +e.item.status-circle.status-circle_busy занят 3
+      +e.item.status-circle.status-circle_transit в пути 3
+      +e.item.status-circle нет на линии 1
+  +b.UL.order-list
+    +e.item.js-order-item
+      +e.wrapper
+        +e.column_data.status-circle.status-circle_busy
+          +e.car-type Honda Civic (белый седан) PX 2345 P-7
+          +e.employee Арменка Гигивишвили
+        +e.column_tariff
+          +e.tariff Vip
+        +e.column_downtime
+          +e.downtime Простой 3 минуты
+        +e.column_action
+          +button-call
+        +e.column_expander
+    +e.item.js-order-item
+      +e.wrapper
+        +e.column_data.status-circle.status-circle_busy
+          +e.car-type Honda Civic (белый седан) PX 2345 P-7
+          +e.employee Арменка Гигивишвили
+        +e.column_tariff
+          +e.tariff Стандарт
+        +e.column_downtime
+          +e.downtime Простой 3 минуты
+        +e.column_action
+          +button-call
+        +e.column_expander
+          +e.BUTTON.expander.js-order-item-expander
+      +b.UL.order-address-list
+        +e.item
+          | Заказ № 232
+          +svg-icon('geo')
+          +e.SPAN.address Пушкинская 15 кор. 2
+        +e.item
+          | Заказ № 234
+          +svg-icon('geo')
+          +e.SPAN.address Бурдейного 33
+          +e.SPAN.time 13:00
+    - for (var x = 1; x <= 5; x++)
+      +e.item.js-order-item
+        +e.wrapper
+          +e.column_data.status-circle.status-circle_busy
+            +e.car-type Honda Civic (белый седан) PX 2345 P-7
+            +e.employee Арменка Гигивишвили
+          +e.column_tariff
+            +e.tariff Премиум
+          +e.column_downtime
+            +e.downtime Простой 99 минут
+          +e.column_action
+            +button-call
+          +e.column_expander
