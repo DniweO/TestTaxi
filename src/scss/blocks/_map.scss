@@ -1,13 +1,102 @@
 .map {
-  width: $map-width;
+  position: relative;
+
   min-width: $map-width;
-  height: 100vh;
+  height: 90vh;
 
   &__placemark {
-    width: 42px;
-    height: 58px;
+    width: 20px;
+    height: 27px;
 
-    color: $red;
+    color: $green;
+
     fill: $white;
+    &:hover {
+      width: 42px;
+      height: 58px;
+    }
+
+    &--red {
+      color: $red;
+    }
+
+    &--green {
+      color: $green;
+    }
+  }
+}
+
+.regions-map {
+  @include transition;
+
+  position: absolute;
+  z-index: 1;
+  right: 15px;
+  bottom: 40px;
+
+  display: flex;
+
+  padding: 20px;
+
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+
+  align-items: center;
+  justify-content: center;
+
+  &--open {
+    left: 15px;
+  }
+
+  &__title {
+    font-size: 14px;
+    margin-right: 50px;
+
+    &--hide {
+      font-size: 0;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+
+    display: inline-block;
+
+    width: 30px;
+    height: 30px;
+
+    border: 1px solid $gray-white;
+    border-radius: 50%;
+
+    &::after {
+      @include transition;
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      display: block;
+
+      width: 10px;
+      height: 10px;
+
+      content: '';
+      transform: translate(-50%, -25%) rotate(-45deg);
+      transform-origin: center;
+
+      border: 3px solid $black;
+      border-bottom: none;
+      border-left: none;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+
+    &--down {
+      @include rotate-arrow('down');
+    }
   }
 }
