@@ -233,16 +233,29 @@
   &__region {
     @include transition;
 
-    opacity: 0.6;
+    opacity: 1;
 
-    fill: $light-gray;
+    fill: $gray-white;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.5;
     }
+  }
+
+  &_green &__region {
+    fill: $green;
+  }
+
+  &_yellow &__region {
+    fill: $yellow;
+  }
+
+  &_red &__region {
+    fill: $red;
   }
 
   &__region-stroke {
     fill: $white;
   }
+
 }
