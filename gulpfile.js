@@ -43,8 +43,8 @@ const paths = {
 
 const sources = {
   jsSrc:       [
-    paths.js + 'browser-updater.js',
-    paths.js + 'map.js'
+    paths.js + 'map.js',
+    paths.js + 'browser-updater.js'
   ],
   libsJsSrc:   [
     paths.libs + 'jquery/dist/jquery.min.js'
