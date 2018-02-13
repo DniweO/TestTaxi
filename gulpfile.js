@@ -45,15 +45,18 @@ const sources = {
   jsSrc:       [
     paths.js + 'map.js',
     paths.js + 'order-item.js',
+    paths.js + 'analytics.js',
     paths.js + 'browser-updater.js'
   ],
   libsJsSrc:   [
-    paths.libs + 'jquery/dist/jquery.min.js'
+    paths.libs + 'jquery/dist/jquery.min.js',
+    paths.libs + 'swiper/dist/js/swiper.min.js'
   ],
   imgSrc:      paths.images + '**/*.{png,jpg,jpeg,gif,svg,ico}',
   fontsSrc:    paths.fonts + '**/*.{woff,woff2,ttf, eot}',
   sassSrc:     paths.sass + 'style.scss',
   libsSassSrc: [
+    paths.libs + 'swiper/dist/css/swiper.min.css',
     paths.libs + 'normalize-css/normalize.css'
   ],
   pugSrc:      [paths.pug + '*.pug', '!' + paths.pug + '_*.pug']
