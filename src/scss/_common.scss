@@ -90,15 +90,19 @@
     background-color: #4f4f4f;
   }
 
-  &_free:before {
+  &_green:before {
     background-color: $green;
   }
 
-  &_busy:before {
+  &_red:before {
     background-color: $red;
   }
 
-  &_transit:before {
+  &_yellow:before {
     background-color: $yellow;
+  }
+
+  &_gray:before {
+    background-color: $gray-white;
   }
 }
