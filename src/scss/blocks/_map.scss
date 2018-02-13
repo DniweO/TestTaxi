@@ -2,7 +2,7 @@
   position: relative;
 
   min-width: $map-width;
-  height: 90vh;
+  height: calc(100vh - 60px - 15px); // screen height - header - footer
 
   &__placemark {
     width: 20px;
@@ -16,11 +16,11 @@
       height: 58px;
     }
 
-    &--red {
+    &_red {
       color: $red;
     }
 
-    &--green {
+    &_green {
       color: $green;
     }
   }
@@ -38,14 +38,16 @@
   align-items: center;
   justify-content: center;
 
-  padding: 20px;
+  width: 200px;
+  padding: 20px 15px;
 
   border-radius: 5px;
   background: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 
-  &--open {
-    left: 15px;
+  &.is-expand {
+    width: 500px;
+    min-height: 275px;
   }
 
   &__title {
@@ -53,12 +55,14 @@
 
     margin-right: 50px;
 
-    &--hide {
+    .is-expand & {
       font-size: 0;
     }
   }
 
   &__arrow {
+    @include transition();
+
     position: absolute;
     top: 15px;
     right: 15px;
@@ -70,6 +74,12 @@
 
     border: 1px solid $gray-white;
     border-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    }
 
     &::after {
       @include transition;
@@ -95,8 +105,143 @@
       cursor: pointer;
     }
 
-    &--down {
+    .is-expand & {
       @include rotate-arrow('down');
     }
+  }
+
+  &:not(.is-expand) &__plus {
+    display: none;
+  }
+
+  &__plus {
+    @include transition;
+
+    position: relative;
+
+    box-sizing: content-box;
+    width: 12px;
+    height: 12px;
+    padding: 10px 8px 6px 8px;
+
+    border: 1px solid $gray-white;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 12px;
+      height: 2px;
+
+      content: '';
+      transform: translate(-50%, -50%);
+
+      background: $black;
+    }
+
+    &::after {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 2px;
+      height: 12px;
+
+      content: '';
+      transform: translate(-50%, -50%);
+
+      background: $black;
+    }
+  }
+
+  &:not(.is-expand) &__minus {
+    display: none;
+  }
+
+  &__minus {
+    @include transition;
+
+    position: relative;
+
+    box-sizing: content-box;
+    width: 12px;
+    height: 12px;
+    padding: 10px 8px 6px 8px;
+
+    border: 1px solid $gray-white;
+    border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+
+    &:hover {
+      cursor: pointer;
+
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 12px;
+      height: 2px;
+
+      content: '';
+      transform: translate(-50%, -50%);
+
+      background: $black;
+    }
+  }
+
+  &__zoom-control {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:not(.is-expand) &__map {
+    width: 0;
+    height: 0;
+    margin-right: 0;
+  }
+
+  &__map {
+    width: 258px;
+    height: 236px;
+    margin-right: 100px;
+
+    .is-expand & {
+      @include transition;
+    }
+  }
+}
+
+.map-group {
+  &__region {
+    @include transition;
+
+    opacity: 0.6;
+
+    fill: $light-gray;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  &__region-stroke {
+    fill: $white;
   }
 }

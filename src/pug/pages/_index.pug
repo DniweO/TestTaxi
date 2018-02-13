@@ -1,9 +1,14 @@
 .container
   .row.row_flex
-    aside.map#map
-      +b.regions-map.js-regions
+    aside.map#map-widget
+      +b.regions-map.js-expander
         +e.title.js-title Карта районов
-        +e.arrow.js-regions-open
+        +e.arrow.js-expander-open
+        +e.map
+          include ../svg/_map
+        +e.zoom-control
+          +e.plus
+          +e.minus
     main.main
       article.block
         include ../blocks/_lateness

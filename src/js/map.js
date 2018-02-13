@@ -1,5 +1,5 @@
 ymaps.ready(function () {
-    var myMap = new ymaps.Map('map', {
+    var myMap = new ymaps.Map('map-widget', {
             center: [60.000000, 30.299382],
             zoom: 12,
             controls: []
@@ -20,7 +20,7 @@ ymaps.ready(function () {
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
-            iconLayout: 'my#newPlacemark',
+            iconLayout: 'my#newPlacemark'
         }),
 
         placemark2 = new ymaps.Placemark([60.010000, 30.299382], {
@@ -29,7 +29,7 @@ ymaps.ready(function () {
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
-            iconLayout: 'my#newPlacemark',
+            iconLayout: 'my#newPlacemark'
         });
 
     myMap.geoObjects
@@ -38,10 +38,9 @@ ymaps.ready(function () {
 });
 
 $(document).ready(function () {
-    $('.js-regions-open').on('click', function(){
-        var regionsPopup = $(this).closest('.js-regions');
-        regionsPopup.toggleClass('regions-map--open');
-        $(regionsPopup).children('.js-title').toggleClass('regions-map__title--hide');
+    $('.js-expander-open').on('click', function(){
+        var regionsPopup = $(this).closest('.js-expander');
+        regionsPopup.toggleClass('is-expand');
     });
 });
 
