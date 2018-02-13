@@ -5,7 +5,7 @@
         +e.title.js-title Карта районов
         +e.arrow.js-expander-open
         +e.map
-          include ../svg/_map
+          +map()
         +e.zoom-control
           +e.plus
           +e.minus
@@ -18,9 +18,11 @@
         +b.orders-statisic
         +b.minimap
           +e.title С 9:00 до 12:00 тариф Премиум
-          include ../svg/_map
-          +b.UL.indicators-list.minimap__indicators-list
-            +e.item.indicator-circle.indicator-circle_free 0
-            +e.item.indicator-circle.indicator-circle_busy от 1
-            +e.item.indicator-circle.indicator-circle_transit от 30
-            +e.item.indicator-circle от 50
+          +e.map
+            +map('hot-regions')
+          +e.indicators-list
+            +b.UL.indicators-list
+              +e.item.indicator-circle.indicator-circle_gray 0
+              +e.item.indicator-circle.indicator-circle_red от 1
+              +e.item.indicator-circle.indicator-circle_yellow от 30
+              +e.item.indicator-circle.indicator-circle_green от 50

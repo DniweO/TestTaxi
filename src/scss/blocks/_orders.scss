@@ -30,7 +30,7 @@
   overflow-y: auto;
 
   max-height: 310px;
-  padding-right: 30px; // прибавить 5px и убрать бордер
+  padding-right: 30px;
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -39,7 +39,7 @@
     border-radius: 6px;
     background-color: #ebebeb;
   }
-  /* Add a thumb */
+
   &::-webkit-scrollbar-thumb {
     border-radius: 6px;
     background-color: #b2b2b2;

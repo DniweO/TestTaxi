@@ -2,14 +2,14 @@
   +e.head
     +e.title Автомобили
     +b.UL.indicators-list
-      +e.item.indicator-circle.indicator-circle_free свободен 6
-      +e.item.indicator-circle.indicator-circle_busy занят 3
-      +e.item.indicator-circle.indicator-circle_transit в пути 3
+      +e.item.indicator-circle.indicator-circle_green свободен 6
+      +e.item.indicator-circle.indicator-circle_red занят 3
+      +e.item.indicator-circle.indicator-circle_yellow в пути 3
       +e.item.indicator-circle нет на линии 1
   +b.UL.order-list
     +e.item.js-order-item
       +e.wrapper
-        +e.column_data.indicator-circle.indicator-circle_busy
+        +e.column_data.indicator-circle.indicator-circle_green
           +e.car-type Honda Civic (белый седан) PX 2345 P-7
           +e.employee Арменка Гигивишвили
         +e.column_tariff
@@ -21,7 +21,7 @@
         +e.column_expander
     +e.item.js-order-item
       +e.wrapper
-        +e.column_data.indicator-circle.indicator-circle_busy
+        +e.column_data.indicator-circle.indicator-circle_green
           +e.car-type Honda Civic (белый седан) PX 2345 P-7
           +e.employee Арменка Гигивишвили
         +e.column_tariff
@@ -45,7 +45,7 @@
     - for (var x = 1; x <= 5; x++)
       +e.item.js-order-item
         +e.wrapper
-          +e.column_data.indicator-circle.indicator-circle_busy
+          +e.column_data.indicator-circle.indicator-circle_red
             +e.car-type Honda Civic (белый седан) PX 2345 P-7
             +e.employee Арменка Гигивишвили
           +e.column_tariff
