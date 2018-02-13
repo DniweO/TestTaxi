@@ -1,5 +1,4 @@
 ymaps.ready(function () {
-    console.log('yra');
     var myMap = new ymaps.Map('map-widget', {
             center: [60.000000, 30.299382],
             zoom: 12,
@@ -36,7 +35,6 @@ ymaps.ready(function () {
     myMap.geoObjects
         .add(placemark1)
         .add(placemark2);
-    console.log(myMap);
 });
 
 $(document).ready(function () {
