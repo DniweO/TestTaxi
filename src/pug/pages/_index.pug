@@ -10,8 +10,17 @@
           +e.plus
           +e.minus
     main.main
-      article.block
+      article.block.block_small-padding
         include ../blocks/_lateness
       article.block.block_extra-padding
         include ../blocks/_orders
-      article.block
+      article.block.block_flex
+        +b.orders-statisic
+        +b.minimap
+          +e.title С 9:00 до 12:00 тариф Премиум
+          include ../svg/_map
+          +b.UL.indicators-list.minimap__indicators-list
+            +e.item.indicator-circle.indicator-circle_free 0
+            +e.item.indicator-circle.indicator-circle_busy от 1
+            +e.item.indicator-circle.indicator-circle_transit от 30
+            +e.item.indicator-circle от 50
