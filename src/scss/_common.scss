@@ -49,8 +49,6 @@
 }
 
 .block {
-  padding: 10px;
-
   border-radius: 5px;
   background: $white;
   box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
@@ -59,18 +57,26 @@
     margin-top: 20px;
   }
 
+  &_flex {
+    display: flex;
+  }
+
+  &_small-padding {
+    padding: 10px;
+  }
+
   &_extra-padding {
     padding: 10px 11px 12px 30px;
   }
 }
 
-.status-circle {
+.indicator-circle {
   position: relative;
 
   padding-left: 7px + 8px; //7px диаметр, 8px отступ
   &:before {
     position: absolute;
-    top: 2px;
+    top: 3px;
     left: 0;
 
     display: inline-block;

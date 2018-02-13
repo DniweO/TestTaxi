@@ -1,0 +1,20 @@
+.minimap {
+  width: 295px;
+  padding: 30px 20px;
+
+  border-left: 1px solid $gray-white;
+
+  &__title {
+    @include font(13px, 300);
+
+    margin-bottom: 15px;
+
+    text-align: center;
+
+    color: $light-gray;
+  }
+
+  &__indicators-list {
+    margin-top: 20px;
+  }
+}

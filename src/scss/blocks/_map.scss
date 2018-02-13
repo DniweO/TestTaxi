@@ -45,7 +45,7 @@
   background: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
 
-  &.is-expand {
+  &.is-expanded {
     width: 500px;
     min-height: 275px;
   }
@@ -55,7 +55,7 @@
 
     margin-right: 50px;
 
-    .is-expand & {
+    .is-expanded & {
       font-size: 0;
     }
   }
@@ -101,16 +101,17 @@
       border-bottom: none;
       border-left: none;
     }
+
     &:hover {
       cursor: pointer;
     }
 
-    .is-expand & {
+    .is-expanded & {
       @include rotate-arrow('down');
     }
   }
 
-  &:not(.is-expand) &__plus {
+  &:not(.is-expanded) &__plus {
     display: none;
   }
 
@@ -163,7 +164,7 @@
     }
   }
 
-  &:not(.is-expand) &__minus {
+  &:not(.is-expanded) &__minus {
     display: none;
   }
 
@@ -211,7 +212,7 @@
     flex-direction: column;
   }
 
-  &:not(.is-expand) &__map {
+  &:not(.is-expanded) &__map {
     width: 0;
     height: 0;
     margin-right: 0;
@@ -222,7 +223,7 @@
     height: 236px;
     margin-right: 100px;
 
-    .is-expand & {
+    .is-expanded & {
       @include transition;
     }
   }
