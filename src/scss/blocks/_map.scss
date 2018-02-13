@@ -1,7 +1,7 @@
 .map {
   position: relative;
 
-  width: $map-width;
+  min-width: $map-width;
   height: 90vh;
 
   &__placemark {

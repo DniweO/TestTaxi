@@ -12,19 +12,16 @@ $body-bgc: white;                 // цвет фона сайта
 $black: #171717;                  // Основной черный цвет, используется в основном для текста
 $gray-white: #E6E6E6;
 $light-gray: #757575;
-$border: #ececec;                 // цвет бордера таблицы
 $white: white;
-//$yellow: #f2c94c;
 $yellow: #ffdd2b;
 $red: #eb5757;
 $green: #27ae60;
 
-// Основные брендовые цвета
-$breakpoint: 1200px;              // момент переключения навигационного меню
-
 // Размеры блоков
 $map-width: 530px;
 
+// Брейкпоинты
+$breakpoint: 1200px;              // момент переключения навигационного меню
 $sm: 544px;                       // Small screen / phone
 $md: 768px;                       // Medium screen / tablet
 $lg: 992px;                       // Large screen / desktop
