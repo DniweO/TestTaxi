@@ -44,6 +44,7 @@ const paths = {
 const sources = {
   jsSrc:       [
     paths.js + 'map.js',
+    paths.js + 'order-item.js',
     paths.js + 'browser-updater.js'
   ],
   libsJsSrc:   [

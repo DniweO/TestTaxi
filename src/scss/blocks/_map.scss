@@ -35,6 +35,8 @@
   bottom: 40px;
 
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 200px;
   padding: 20px 15px;
@@ -42,9 +44,6 @@
   border-radius: 5px;
   background: #fff;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
-
-  align-items: center;
-  justify-content: center;
 
   &.is-expand {
     width: 500px;

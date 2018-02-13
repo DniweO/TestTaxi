@@ -69,11 +69,17 @@
       "-ms-overflow-y",
       "clip",
       "zoom",
+      "align-items",
+      "flex-align",
+      "flex-basis",
       "flex-direction",
+      "flex-flow",
+      "flex-grow",
       "flex-order",
       "flex-pack",
-      "flex-align",
-      "flex-basis"
+      "flex-shrink",
+      "flex-wrap",
+      "justify-content"
     ],
     [
       "-webkit-box-sizing",
