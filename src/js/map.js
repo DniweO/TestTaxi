@@ -5,26 +5,43 @@ ymaps.ready(function () {
             controls: []
         }, {
             searchControlProvider: 'yandex#search'
-        }),
+        });
 
-        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-            '<svg class="svg-icon svg-icon-placemark map__placemark">' +
+    var iconLayout = ymaps.templateLayoutFactory.createClass(
+            '<svg class="svg-icon svg-icon-placemark map__placemark map__placemark--{{ properties.color }}">' +
             '    <use xlink:href="#placemark"></use>' +
             '</svg>'
-        ),
+        );
+    ymaps.layout.storage.add('my#newPlacemark', iconLayout);
 
-        myPlacemarkWithContent = new ymaps.Placemark([60.000000, 30.299382], {
+    var placemark1 = new ymaps.Placemark([60.000000, 30.299382], {
             hintContent: 'Собственный значок метки с контентом',
-            balloonContent: 'А эта — новогодняя',
-            iconContent: '12'
+            color: 'red'
         }, {
             // Опции.
             // Необходимо указать данный тип макета.
-            iconLayout: MyIconContentLayout,
-            iconImageSize: [32, 32],
-            iconImageOffset: [-5, -38],
+            iconLayout: 'my#newPlacemark',
+        }),
+
+        placemark2 = new ymaps.Placemark([60.010000, 30.299382], {
+            hintContent: 'Собственный значок метки с контентом',
+            color: 'green'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'my#newPlacemark',
         });
 
     myMap.geoObjects
-        .add(myPlacemarkWithContent);
+        .add(placemark1)
+        .add(placemark2);
 });
+
+$(document).ready(function () {
+    $('.js-regions-open').on('click', function(){
+        var regionsPopup = $(this).closest('.js-regions');
+        regionsPopup.toggleClass('regions-map--open');
+        $(regionsPopup).children('.js-title').toggleClass('regions-map__title--hide');
+    });
+});
+

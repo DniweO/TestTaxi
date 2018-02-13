@@ -1,6 +1,9 @@
 .container
   .row.row_flex
     aside.map#map
+      +b.regions-map.js-regions
+        +e.title.js-title Карта районов
+        +e.arrow.js-regions-open
     main.main
       article.block
         include ../blocks/_lateness
