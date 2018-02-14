@@ -31,9 +31,18 @@
     color: $red;
   }
 
+  &__call {
+    position: relative;
+
+    width: 30px;
+  }
+
   &__anchor {
+    position: relative;
+
     margin-left: 15px;
     padding: 5px;
+
     .svg-icon-dots {
       width: 4px;
       height: 18px;

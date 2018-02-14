@@ -3,7 +3,20 @@
     +svg-icon('exclamation')
   +e.SPAN.order-number Заказ № 232
   +e.SPAN.employee Honda Civic (белый седан) PX 2345 P-7
-  +e.SPAN.delay Опаздание 2 мин.
-  +button-call
-  +e.BUTTON.anchor
-    +svg-icon('dots-vertical')
+  +e.SPAN.delay Опоздание 2 мин.
+  +e.SPAN.call
+    +b.sub-menu
+      +button-call
+      +e.UL.list
+        +e.item
+          +e.link(href='/') Позвонить клиенту
+        +e.item
+          +e.link(href='/') Позвонить водителю
+  +e.anchor
+    +b.BUTTON.sub-menu
+      +svg-icon('dots-vertical')
+      +e.UL.list
+        +e.item
+          +e.link(href='/') Закрыть
+        +e.item
+          +e.link(href='/') Переадресация заказа

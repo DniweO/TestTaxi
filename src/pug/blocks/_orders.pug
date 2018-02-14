@@ -21,7 +21,15 @@
         +e.column_downtime
           +e.downtime Простой 3 минуты
         +e.column_action
-          +button-call
+          +b.sub-menu.sub-menu_call
+            +button-call
+            +e.UL.list
+              +e.item
+                +e.link_number-padding(href='/') Позвонить водителю
+              +e.item
+                +e.link_number-one(href='/') Позвонить клиенту
+              +e.item
+                +e.link_number-two(href='/') Позвонить клиенту
         +e.column_expander
     +e.item.js-order-item
       +e.wrapper
@@ -33,7 +41,15 @@
         +e.column_downtime
           +e.downtime Простой 3 минуты
         +e.column_action
-          +button-call
+          +b.sub-menu.sub-menu_call
+            +button-call
+            +e.UL.list
+              +e.item
+                +e.link_number-padding(href='/') Позвонить водителю
+              +e.item
+                +e.link_number-one(href='/') Позвонить клиенту
+              +e.item
+                +e.link_number-two(href='/') Позвонить клиенту
         +e.column_expander
           +e.BUTTON.expander.js-order-item-expander
       +b.UL.order-address-list
@@ -57,5 +73,13 @@
           +e.column_downtime
             +e.downtime Простой 99 минут
           +e.column_action
-            +button-call
+            +b.sub-menu.sub-menu_call
+              +button-call
+              +e.UL.list
+                +e.item
+                  +e.link_number-padding(href='/') Позвонить водителю
+                +e.item
+                  +e.link_number-one(href='/') Позвонить клиенту
+                +e.item
+                  +e.link_number-two(href='/') Позвонить клиенту
           +e.column_expander

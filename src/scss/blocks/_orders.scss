@@ -2,7 +2,7 @@
   &__head {
     display: flex;
 
-    padding: 21px 12px 15px 0;
+    padding: 21px 12px 15px 30px;
   }
 
   &__title {
@@ -37,6 +37,7 @@
 
   max-height: 310px;
   padding-right: 30px;
+  padding-left: 30px;
 
   &::-webkit-scrollbar {
     width: 5px;
@@ -54,9 +55,25 @@
   &__item {
     @include font(13px);
 
+    position: relative;
+
     padding: 21px 2px 18px 0;
 
     border-top: 1px solid $border;
+  }
+
+  &__item.is-expanded {
+    &::before {
+      position: absolute;
+      top: 0;
+      left: -30px;
+
+      height: 100%;
+
+      content: '';
+
+      border-left: 5px solid $yellow;
+    }
   }
 
   &__item.is-expanded .order-address-list {
@@ -88,11 +105,11 @@
   }
 
   &__column_action {
-    padding: 0;
+    position: relative;
 
-    .button-call {
-      margin-top: -7px;
-    }
+    min-width: 30px;
+    margin-top: -7px;
+    padding: 0;
   }
 
   &__column_expander {
