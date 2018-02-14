@@ -2,6 +2,8 @@
 
 .header {
   background-color: $white;
+
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2)
 }
 
 .logo {
@@ -164,23 +166,22 @@
 }
 
 .user {
+  display: flex;
+
   margin-right: 30px;
   margin-left: auto;
 
   &__name {
-    // миксин генерирует стрелку в псевдоэлементе after см. _mixins.scss
-    @include arrow(8px);
-    @include rotate-arrow('down');
-
     font-size: 14px;
     line-height: 1;
 
-    padding-right: 19px;
-    &:hover {
-      @include rotate-arrow('up');
+    padding-right: 15px;
+  }
 
-      cursor: pointer;
-    }
+  &__arrow {
+    position: relative;
+
+    margin-top: -5px;
   }
 }
 

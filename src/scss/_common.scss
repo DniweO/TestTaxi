@@ -228,6 +228,25 @@
     text-decoration: underline;
   }
 
+  &:hover &__arrow {
+    @include rotate-arrow('up');
+
+    cursor: pointer;
+  }
+
+  &__arrow {
+    // миксин генерирует стрелку в псевдоэлементе after см. _mixins.scss
+    @include arrow(8px);
+    @include rotate-arrow('down');
+
+    font-size: 14px;
+    line-height: 1;
+
+    z-index: 70;
+
+    padding-right: 19px;
+  }
+
   .svg-icon-dots-vertical {
     position: relative;
     z-index: 70;
