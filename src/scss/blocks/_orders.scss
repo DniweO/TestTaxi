@@ -62,7 +62,7 @@
     border-top: 1px solid $border;
   }
 
-  &__item.is-expanded {
+  &__item.is-selected {
     &::before {
       position: absolute;
       top: 0;
