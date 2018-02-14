@@ -44,10 +44,8 @@
 }
 
 .main {
-  width: calc(100% - #{$map-width});
+  width: $main-width;
   padding: 30px 30px 28px 30px;
-
-  background-color: #f4f4f4;
 }
 
 .block {

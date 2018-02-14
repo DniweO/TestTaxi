@@ -1,11 +1,13 @@
 // /src/scss/_header.scss
 
 .header {
-  //
+  background-color: $white;
 }
 
 .logo {
   display: flex;
+  align-items: center;
+  justify-content: center;
 
   width: 60px;
   min-width: 60px;
@@ -13,9 +15,6 @@
 
   color: $white;
   background-color: #3a588c;
-
-  align-items: center;
-  justify-content: center;
 }
 
 .nav {
@@ -122,13 +121,12 @@
   @include font(13px,300,1);
 
   display: flex;
+  align-items: center;
 
   margin-right: 21px;
   margin-left: 40px;
 
   word-break: keep-all;
-
-  align-items: center;
 
   &__pause {
     margin-right: 20px;

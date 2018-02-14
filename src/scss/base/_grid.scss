@@ -1,7 +1,7 @@
 // /src/scss/_grid.scss
 
 .container {
-  width: $site-width;
+  width: 100%;
   min-width: $site-width;
   margin-right: auto;
   margin-left: auto;
@@ -11,8 +11,8 @@
 
 // используется в сочетании с основным контейнером .container
 .row {
-  margin-left: -$gutter;
   margin-right: -$gutter;
+  margin-left: -$gutter;
 
   &_flex {
     display: flex;
